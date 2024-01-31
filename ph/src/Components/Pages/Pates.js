@@ -15,7 +15,7 @@ const dataPate = [
     category: 'ravier',
     imgSrc: BOLO,
     title: 'Bolognaise',
-    text: 'rrLorem, ipsum dolor sit amet consectetur adipisicing elit...',
+    text: 'Découvrez l\'élégance des penne al dente, baignées dans une sauce tomate riche, accompagnées de viande hachée tendre, de mozzarella fondante, et d\'une touche subtile de sauce crème. Une symphonie culinaire italienne, un plaisir irrésistible à chaque bouchée. Embarquez pour un voyage gustatif unique !',
   },
   {
     category: 'ravier',
@@ -63,7 +63,7 @@ const dataPate = [
     category: 'ravier',
     imgSrc: 'https://images.unsplash.com/photo-1656618020911-1c7a937175fd?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc1MzQyNTE&ixlib=rb-1.2.1&q=80',
     title: 'poulet andalouse',
-    text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci voluptates cumque, veritatis atque nostrum corrupti ipsa asperiores harum? Dicta odio aut hic.',
+    text: 'Découvrez notre création gastronomique, le Poulet Andalouse. Un mariage exquis de tendres morceaux de poulet, de la riche sauce andalouse aux accents méditerranéens, le tout sublimé par une onctueuse sauce crème. Le plaisir gustatif à l\'état pur, où le poulet fond dans une symphonie de saveurs. Un voyage culinaire qui éveillera vos sens. À déguster, à savourer, à adorer !',
   },
   {
     category: 'ravier',
@@ -366,19 +366,20 @@ const Pate = () => {
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
-    <div>
-      <label class="labelAffichage">
-        <input type="radio" name="category" value="ravier" checked> Ravier
-      </label>
-      <label class="labelAffichage">
-        <input type="radio" name="category" value="assiete"> Assiette
-      </label>
-      <label class="labelAffichage">
-        <input type="radio" name="category" value="gratnie"> Gratiné
-      </label>
-      
-    </div>
-    <main class="lacard"></main>`;
+    <div class="menu-container">
+  <div class="menu-content">
+    <label class="labelAffichage">
+      <input type="radio" name="category" value="ravier" checked> Ravier
+    </label>
+    <label class="labelAffichage">
+      <input type="radio" name="category" value="assiete"> Assiette
+    </label>
+    <label class="labelAffichage">
+      <input type="radio" name="category" value="gratnie"> Gratiné
+    </label>
+  </div>
+</div>
+<main class="lacard"></main>`;
 
   // Ajouter un écouteur d'événements aux radios
   document.querySelectorAll('input[name="category"]').forEach(radio => {
