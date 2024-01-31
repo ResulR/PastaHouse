@@ -357,7 +357,6 @@ const dataPate = [
 
 
   
-
 const main = document.querySelector('main');
 
 const Pate = () => {
@@ -377,9 +376,9 @@ const Pate = () => {
       <label class="labelAffichage">
         <input type="radio" name="category" value="gratnie"> Gratiné
       </label>
-    
+      
     </div>
-    <main class="lacard"></main>`;  // Ajout de la balise main pour contenir les cartes
+    <main class="lacard"></main>`;
 
   // Ajouter un écouteur d'événements aux radios
   document.querySelectorAll('input[name="category"]').forEach(radio => {
@@ -387,6 +386,22 @@ const Pate = () => {
       // Appeler la fonction pour mettre à jour les pâtes avec la catégorie sélectionnée
       updatePates(radio.value);
     });
+  });
+
+  // Ajouter un écouteur d'événements aux cartes
+  main.querySelector('.lacard').addEventListener('click', (event) => {
+    const clickedCard = event.target.closest('.card');
+    if (clickedCard) {
+      // Désactiver toutes les autres cartes
+      document.querySelectorAll('.card').forEach(card => {
+        if (card !== clickedCard) {
+          card.classList.remove('active');
+        }
+      });
+
+      // Ajouter ou supprimer la classe 'active' pour le clic sur la carte
+      clickedCard.classList.toggle('active');
+    }
   });
 
   // Afficher les pâtes de la catégorie "ravier" par défaut
